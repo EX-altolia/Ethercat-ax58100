@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by TeaM DJiNN (TeaM DJiNN) -->
+<!--这一段是xml文件的注释-->
+<!--以下这一段EtherCATInfo是有效的xml内容-->
+<EtherCATInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="EtherCATInfo.xsd" Version="1.2">
+	<!--以下这一段Vendor主要用于标识供应商的信息-->
+	<Vendor>
+		<!--厂商合法性验证-->
+		<Id>#x00000b95</Id>
+		<!--厂商名-->
+		<Name>ACTI</Name>
+		<!--厂商的图标-->
+		<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000120B0000120B0000100000001000000000000000000080000080000000808000800000008000800080800000C0C0C000808080000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF009D9DD99DD9DDD9DD9D9D9DD9D9DDD9DD999D9DD9D999D9999D9D9DD9D9DDD9DD9D9DD99DD999D999DDDDDDDDDDDDDDDD88888888888888888888888888888888DDDDDDDDDDDDDDDD999D999DD99DD9D99D9D9DDD9DD9D9D999DD999D9DDDD99D9D9D9DDD9DD9D99D999D999DD99DD9D9</ImageData16x14>
+	</Vendor>
+	<!--以下这一段Descriptions就是描述具体的协议-->
+	<Descriptions>
+		<!--以下这一段Vendor主要用于标识设备的信息-->
+		<Groups>
+			<Group>
+				<!--设备型号-->
+				<Type>FB1XXX</Type>
+				<!--设备名-->
+				<Name LcId="1033">Zynq-Slave</Name><!--英语显示-->
+				<Name LcId="1031">Zynq-Slave</Name><!--德语显示-->
+				<!--设备图标-->
+				<ImageData16x14>424DD6020000000000003600000028000000100000000E0000000100180000000000A0020000120B0000120B00000000000000000000FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF0000FFFF00FFFF00FFFF00FF0000FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF0000FFFF00FFFF00FF0000FF0000FF0000FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF0000FF0000FF0000FFFF00FFFF00FF0000FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF0000FFFF00FFFF00FFFF00FF0000FFFF00FF008000008000008000008000008000008000008000008000404040404040404040404040404040404040404040404040008000007FFF007FFF00800000800000800000800000800040404000800000800000800000800000800000800040404000800000800000800000800000800000800000800000800040404000800000800000800000800000800000800040404000800000800000800000800000800000800000800000800040404000800000800000800000800000800000800040404000800000800000800000800000800000800000800000800040404040404040404040404040404040404040404040404000800000800000800000800000800000800000800000800000800000800000800000800000800000800000800000800000800000FFFF00800000FFFF00800000800000FFFF00800000FFFF00800000800000800000FFFF00800000FFFF00800000800000800000800000800000800000800000800000800000800000800000800000800000800000800000800000800000800000FFFF00800000FFFF00800000800000FFFF00800000FFFF00800000800000800000FFFF00800000FFFF008000008000008000008000008000008000008000008000008000008000008000008000008000008000008000008000008000</ImageData16x14>
+			</Group>
+		</Groups>
+
+		<Devices>
+			<!--Device/@Physics是EtherCAT从站信息(ESI)文件中的一个强制属性,用于描述设备的物理端口配置。
+			它由一个最多包含四个字符的字符串组成,每个字符代表设备上一个逻辑端口的物理类型。
+			其中,每个X代表一个端口的物理类型:
+			第一个字符: 逻辑端口0的物理类型
+			第二个字符: 逻辑端口1的物理类型
+			第三个字符: 逻辑端口2的物理类型
+			第四个字符: 逻辑端口3的物理类型
+			常见的物理类型编码包括:
+			Y: MII (媒体独立接口)
+			H: MII - 快速热连接
+			K: LVDS (低压差分信号)
+			例如这里就表明该从站有两个端口，且两个端口中，端口0是MII，端口1是MII
+			-->
+			<Device Physics="YY">
+				<!--型号唯一标识-->
+				<Type ProductCode="#x03450862" RevisionNo="#x0259008D">Zynq-Slave</Type>
+				<!--版本兼容性控制，用于标识固件版本，比如这一段写完后，0x0259008D = 固件版本2.89.141（按ETG规范拆分字节），低于此版本会被twincat忽略-->
+				<HideType RevisionNo="#x0258008D"/>
+				<!--设备名与网站标识-->
+				<Name LcId="1033"><![CDATA[Zynq-Slave]]></Name>
+				<Name LcId="1031"><![CDATA[Zynq-Slave]]></Name>
+				<URL LcId="1033"><![CDATA[http://www.beckhoff.com/FB1111]]></URL>
+				<URL LcId="1031"><![CDATA[http://www.beckhoff.de/FB1111]]></URL>
+				<!--设备分组类型为Beckhoff FB1xxx系列设备-->
+				<GroupType>FB1XXX</GroupType>
+
+				<!--配置第一个FMMU（Fieldbus Memory Management Unit）用于输出数据映射，实现过程数据对象(PDO)到物理地址的映射-->
+				<Fmmu>Outputs</Fmmu>
+				<!--配置第二个FMMU用于输入数据映射-->
+				<Fmmu>Inputs</Fmmu>
+
+				<!--以下四个都是对同步管理器进行配置-->
+				<!--ControlByte：同步模式控制字（bit字段控制缓冲类型、操作模式等）-->
+
+				<!--MBoxOut：邮箱输出通道
+				默认128字节，起始地址0x1000
+				Control Byte 0x26表示：同步类型=邮箱写，预分配存储，启用PDO分配-->
+				<Sm DefaultSize="128" StartAddress="#x1000" ControlByte="#x26" Enable="1">MBoxOut</Sm>
+				<!--MBoxIn：邮箱输入通道
+				默认128字节，起始地址0x1080
+				Control Byte 0x22表示：同步类型=邮箱读，预分配存储-->
+				<Sm DefaultSize="128" StartAddress="#x1080" ControlByte="#x22" Enable="1">MBoxIn</Sm>
+				<!--Outputs：过程数据输出
+				起始地址0x1100
+				Control Byte 0x24表示：同步类型=输出，启用PDO分配-->
+				<Sm StartAddress="#x1100" ControlByte="#x24" Enable="1">Outputs</Sm>
+				<!--Inputs：过程数据输入
+				起始地址0x1180
+				Control Byte 0x20表示：同步类型=输入-->
+				<Sm StartAddress="#x1180" ControlByte="#x20" Enable="1">Inputs</Sm>
+
+				<!--定义接收PDO（从主站到从站的过程数据）与同步管理器SM2关联
+				SM2对应之前配置的Outputs同步管理器（StartAddress=0x1100）
+				后面的TxPdo与此同理-->
+
+				<RxPdo Sm="2">
+					<!--指定PDO映射索引地址为0x1A00，这是EtherCAT标准中接收PDO分配的标准索引-->
+					<Index>#x1a00</Index>
+					<!--定义该PDO的名称为"Outputs"，表示用于设备输出控制-->
+					<Name>Outputs</Name>
+					<!-- 每个Entry对应一个数据通道，这里就是DEVICE打开后可被控制的数据通道 -->
+					<Entry>
+						<Index>#x7000</Index><!-- 指向对象字典0x7000区域 -->
+						<SubIndex>1</SubIndex><!-- 子索引1 -->
+						<BitLen>8</BitLen><!-- 数据长度8位 -->
+						<Name>DATA_Out0</Name><!-- 通道名称 -->
+						<DataType>BITARR8</DataType><!-- 数据类型为8位位数组 -->
+					</Entry>
+					<!-- 下面的都同理 -->
+					<Entry>
+						<Index>#x7000</Index>
+						<SubIndex>2</SubIndex>
+						<BitLen>8</BitLen>
+						<Name>DATA_Out1</Name>
+						<DataType>BITARR8</DataType>
+					</Entry>
+					<Entry>
+						<Index>#x7000</Index>
+						<SubIndex>3</SubIndex>
+						<BitLen>8</BitLen>
+						<Name>DATA_Out2</Name>
+						<DataType>BITARR8</DataType>
+					</Entry>
+					<Entry>
+						<Index>#x7000</Index>
+						<SubIndex>4</SubIndex>
+						<BitLen>8</BitLen>
+						<Name>DATA_Out3</Name>
+						<DataType>BITARR8</DataType><!-- 数值操作（USINT） -->
+					</Entry>
+					<Entry>
+						<Index>#x7000</Index>
+						<SubIndex>5</SubIndex>
+						<BitLen>8</BitLen>
+						<Name>DATA_Out4</Name>
+						<DataType>BITARR8</DataType>
+					</Entry>
+				</RxPdo>
+
+				<TxPdo Sm="3">
+					<Index>#x1600</Index>
+					<Name>Inputs</Name>
+					<Entry>
+						<Index>#x6000</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>8</BitLen>
+						<Name>DATA_In0</Name>
+						<DataType>BITARR8</DataType>
+					</Entry>
+					<Entry>
+						<Index>#x6000</Index>
+						<SubIndex>2</SubIndex>
+						<BitLen>8</BitLen>
+						<Name>DATA_In1</Name>
+						<DataType>BITARR8</DataType>
+					</Entry>
+					<Entry>
+						<Index>#x6000</Index>
+						<SubIndex>3</SubIndex>
+						<BitLen>8</BitLen>
+						<Name>DATA_In2</Name>
+						<DataType>BITARR8</DataType>
+					</Entry>
+					
+				</TxPdo>
+				<!-- 这是对EtherCAT邮箱协议的基础配置声明，
+				声明设备支持EtherCAT邮箱协议（非实时通信通道）
+				其物理层实现：占用之前配置的MBoxOut(0x1000)和MBoxIn(0x1080)同步管理器资源 -->
+				<Mailbox>
+					<!-- <CoE/>空标签，声明支持CANopen over EtherCAT协议（CoE），但未扩展特殊配置
+					等效于以下内容：
+					<CoE>
+    					<AutoCreateSdo>1</AutoCreateSdo>   自动生成SDO映射
+    					<PdoCrcCheck>0</PdoCrcCheck>       禁用CRC校验 
+    					<BootStrap enabled="1"/>           启用启动状态机 
+					</CoE> 
+					-->
+					<CoE/>
+				</Mailbox>
+
+				<!-- 作用：声明设备支持EtherCAT分布式时钟（Distributed Clock）功能
+				硬件要求：需要ESC芯片支持DC功能（如Beckhoff ESI芯片） -->
+				<Dc>
+					<!-- 操作模式配置 -->
+					<OpMode>
+						<Name>DcOff</Name><!-- 模式名称 -->
+						<Desc>DC unused</Desc><!-- 模式描述 -->
+						<AssignActivate>#x0000</AssignActivate><!-- 模式激活码，禁用分布式时钟对应对象字典0x9C40的赋值0x0000（不启用DC同步） -->
+					</OpMode>
+					<OpMode>
+						<Name>DcSync</Name><!-- 模式名称 -->
+						<Desc>DC for synchronization</Desc><!-- 模式描述 -->
+						<AssignActivate>#x0100</AssignActivate><!-- 0x0100激活码：使能同步模式0（基本同步模式） -->
+						<CycleTimeSync0 Factor="1">0</CycleTimeSync0><!-- Factor="1"表示时间单位是ns
+																	值0表示自动跟随主站周期（若设固定值如1000000则表示1ms周期） -->
+						<ShiftTimeSync0>0</ShiftTimeSync0>
+					</OpMode>
+				</Dc>
+				<Eeprom><!-- 定义从站eeprom配置 -->
+					<ByteSize>2048</ByteSize><!-- 声明从站eeprom容量 -->
+					<!-- eeprom不同容量中，被分的区也不同，其中在此从站中：
+					0x000-0x03F : 厂商信息区（Beckhoff专用）
+					0x040-0x07F : EtherCAT从站信息区（标准ESC配置）
+					0x080-0x7FF : 用户配置区（PDO映射等） -->
+
+					<!--	ConfigData这一段是一些标识，对应于设备配置
+					数据格式：十六进制字节流（实际长度6字节）
+					解码为：0x05 0x0E 0x03 0xEE 0xE8 0x03
+					对应EEPROM 0x040起始地址开始的标准配置：
+					0x040: 0x05 -> ESC类型，如ET1100
+					0x041: 0x0E -> 版本号，如Rev.14
+					0x042: 0x03 -> 端口数量，3个物理端口
+					0x043: 0xEE -> 二进制11101110，表示端口0-3的方向和激活状态
+					后面的就要看具体配置了，总的来说就可能是这样：
+					地址    HEX值   二进制值     参数说明      		工程配置项
+					0x040	0x05	0000 0101	ESC类型标识	  		EtherCAT Chip Type = ET1100
+					0x041	0x0E	0000 1110	硬件版本			Hardware Revision = 14 (0x0E=14)
+					0x042	0x03	0000 0011	物理端口数量		3 Ports (支持级联拓扑)
+					0x043	0xEE	11 10 1110	端口功能配置		<br>• Bit7-6: Port0=11(IN/OUT激活)<br>• Bit5-4: Port1=10(仅IN激活)<br>• Bit3-2: Port2=11(IN/OUT激活)<br>• Bit1-0: 保留
+					0x044	0xE8	1110 1000	看门狗与状态机配置	<br>• 高4位 1110：看门狗分频系数=14+1=15次总线周期超时<br>• 低4位 1000：状态转换延迟=8ms
+					0x045	0x03	0000 0011	高级功能使能		<br>• Bit0=1：启用分布式时钟(DC)<br>• Bit1=1：启用增强型同步模式 -->
+					<ConfigData>050E03EEE803</ConfigData>
+
+				</Eeprom>
+			</Device>
+		</Devices>
+	</Descriptions>
+</EtherCATInfo>

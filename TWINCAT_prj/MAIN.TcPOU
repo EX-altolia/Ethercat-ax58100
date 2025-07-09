@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+  <POU Name="MAIN" Id="{b7c107ff-3f4e-4218-ae21-be582302de58}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+
+VAR
+
+	input0    		: INT;
+	input0_0 AT %I* : BOOL;
+	input0_1 AT %I* : BOOL;
+	input0_2 AT %I* : BOOL;
+	input0_3 AT %I* : BOOL;
+	input0_4 AT %I* : BOOL;
+	input0_5 AT %I* : BOOL;
+	input0_6 AT %I* : BOOL;
+	input0_7 AT %I* : BOOL;
+	
+	input1    		: INT;
+	input1_0 AT %I* : BOOL;
+	input1_1 AT %I* : BOOL;
+	input1_2 AT %I* : BOOL;
+	input1_3 AT %I* : BOOL;
+	input1_4 AT %I* : BOOL;
+	input1_5 AT %I* : BOOL;
+	input1_6 AT %I* : BOOL;
+	input1_7 AT %I* : BOOL;
+	
+	input2    		: INT;
+	input2_0 AT %I* : BOOL;
+	input2_1 AT %I* : BOOL;
+	input2_2 AT %I* : BOOL;
+	input2_3 AT %I* : BOOL;
+	input2_4 AT %I* : BOOL;
+	input2_5 AT %I* : BOOL;
+	input2_6 AT %I* : BOOL;
+	input2_7 AT %I* : BOOL;
+	
+	input3    		: INT;
+	input3_0 AT %I* : BOOL;
+	input3_1 AT %I* : BOOL;
+	input3_2 AT %I* : BOOL;
+	input3_3 AT %I* : BOOL;
+	input3_4 AT %I* : BOOL;
+	input3_5 AT %I* : BOOL;
+	input3_6 AT %I* : BOOL;
+	input3_7 AT %I* : BOOL;
+	
+	input4    		: INT ;
+	input4_0 AT %I* : BOOL;
+	input4_1 AT %I* : BOOL;
+	input4_2 AT %I* : BOOL;
+	input4_3 AT %I* : BOOL;
+	input4_4 AT %I* : BOOL;
+	input4_5 AT %I* : BOOL;
+	input4_6 AT %I* : BOOL;
+	input4_7 AT %I* : BOOL;
+	
+	input5    		: INT ;
+	input5_0 AT %I* : BOOL;
+	input5_1 AT %I* : BOOL;
+	input5_2 AT %I* : BOOL;
+	input5_3 AT %I* : BOOL;
+	input5_4 AT %I* : BOOL;
+	input5_5 AT %I* : BOOL;
+	input5_6 AT %I* : BOOL;
+	input5_7 AT %I* : BOOL;
+	
+	output_flag     :INT;
+
+	
+	output0         : INT ;       
+	output0_0 AT %Q*: BOOL;
+	output0_1 AT %Q*: BOOL;
+	output0_2 AT %Q*: BOOL;
+	output0_3 AT %Q*: BOOL;
+	output0_4 AT %Q*: BOOL;
+	output0_5 AT %Q*: BOOL;
+	output0_6 AT %Q*: BOOL;
+	output0_7 AT %Q*: BOOL;
+	
+	output1         : INT ;   
+	output1_0 AT %Q*: BOOL;
+	output1_1 AT %Q*: BOOL;
+	output1_2 AT %Q*: BOOL;
+	output1_3 AT %Q*: BOOL;
+	output1_4 AT %Q*: BOOL;
+	output1_5 AT %Q*: BOOL;
+	output1_6 AT %Q*: BOOL;
+	output1_7 AT %Q*: BOOL;
+	
+	output2         : INT ;   
+	output2_0 AT %Q*: BOOL;
+	output2_1 AT %Q*: BOOL;
+	output2_2 AT %Q*: BOOL;
+	output2_3 AT %Q*: BOOL;
+	output2_4 AT %Q*: BOOL;
+	output2_5 AT %Q*: BOOL;
+	output2_6 AT %Q*: BOOL;
+	output2_7 AT %Q*: BOOL;
+	
+END_VAR
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[input0.0 := input0_0;
+input0.1 := input0_1;
+input0.2 := input0_2;
+input0.3 := input0_3;
+input0.4 := input0_4;
+input0.5 := input0_5;
+input0.6 := input0_6;
+input0.7 := input0_7;
+
+input1.0 := input1_0;
+input1.1 := input1_1;
+input1.2 := input1_2;
+input1.3 := input1_3;
+input1.4 := input1_4;
+input1.5 := input1_5;
+input1.6 := input1_6;
+input1.7 := input1_7;
+
+
+input2.0 := input2_0;
+input2.1 := input2_1;
+input2.2 := input2_2;
+input2.3 := input2_3;
+input2.4 := input2_4;
+input2.5 := input2_5;
+input2.6 := input2_6;
+input2.7 := input2_7;
+
+
+input3.0 := input3_0;
+input3.1 := input3_1;
+input3.2 := input3_2;
+input3.3 := input3_3;
+input3.4 := input3_4;
+input3.5 := input3_5;
+input3.6 := input3_6;
+input3.7 := input3_7;
+
+
+input4.0 := input4_0;
+input4.1 := input4_1;
+input4.2 := input4_2;
+input4.3 := input4_3;
+input4.4 := input4_4;
+input4.5 := input4_5;
+input4.6 := input4_6;
+input4.7 := input4_7;
+
+input5.0 := input5_0;
+input5.1 := input5_1;
+input5.2 := input5_2;
+input5.3 := input5_3;
+input5.4 := input5_4;
+input5.5 := input5_5;
+input5.6 := input5_6;
+input5.7 := input5_7;
+
+
+
+
+IF output_flag = 1THEN
+	output0_0  := output0.0;
+    output0_1  := output0.1;
+    output0_2  := output0.2;
+    output0_3  := output0.3;
+    output0_4  := output0.4;
+    output0_5  := output0.5;
+    output0_6  := output0.6;
+    output0_7  := output0.7;
+	
+	output1_0  := output1.0;
+    output1_1  := output1.1;
+    output1_2  := output1.2;
+    output1_3  := output1.3;
+    output1_4  := output1.4;
+    output1_5  := output1.5;
+    output1_6  := output1.6;
+    output1_7  := output1.7;
+	
+	output2_0  := output2.0;
+    output2_1  := output2.1;
+    output2_2  := output2.2;
+    output2_3  := output2.3;
+    output2_4  := output2.4;
+    output2_5  := output2.5;
+    output2_6  := output2.6;
+    output2_7  := output2.7;
+	 
+
+END_IF
+
+IF output_flag = 0THEN
+
+	output0_0  := 0;
+    output0_1  := 0;
+    output0_2  := 0;
+    output0_3  := 0;
+    output0_4  := 0;
+    output0_5  := 0;
+    output0_6  := 0;
+    output0_7  := 0;
+	
+
+	output1_0  := 0;
+    output1_1  := 0;
+    output1_2  := 0;
+    output1_3  := 0;
+    output1_4  := 0;
+    output1_5  := 0;
+    output1_6  := 0;
+    output1_7  := 0;
+	
+
+	output2_0  := 0;
+    output2_1  := 0;
+    output2_2  := 0;
+    output2_3  := 0;
+    output2_4  := 0;
+    output2_5  := 0;
+    output2_6  := 0;
+    output2_7  := 0;
+	
+	// 同时也将 INT 类型的输出变量清零
+    output0 := 0;
+    output1 := 0;
+    output2 := 0;
+END_IF
+
+
+
+
+
+
+
+
+
+
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="510" Count="46" />
+      <LineId Id="844" Count="7" />
+      <LineId Id="843" Count="0" />
+      <LineId Id="743" Count="0" />
+      <LineId Id="645" Count="0" />
+      <LineId Id="638" Count="0" />
+      <LineId Id="557" Count="27" />
+      <LineId Id="646" Count="1" />
+      <LineId Id="585" Count="31" />
+      <LineId Id="648" Count="0" />
+      <LineId Id="650" Count="2" />
+      <LineId Id="649" Count="0" />
+      <LineId Id="617" Count="11" />
+      <LineId Id="119" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
